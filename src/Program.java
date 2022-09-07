@@ -1,5 +1,13 @@
 import java.util.concurrent.ThreadLocalRandom;
 
+/* Лабораторная работа #1
+ * (no1_070922_34523) от 07.09.2022, вариант #34523
+ * Работу выполнил: Афанасьев Кирилл Александрович
+ * Университет ИТМО, СУиР -- 24.03.02 СУДиН
+ * ИТМО ВТ
+ *
+ * Скриншот задания (формулу) см. в корневой папке
+ */
 public class Program {
     public static void main (String[] args)
     {
@@ -22,6 +30,7 @@ public class Program {
                 {
                     case 12:
                     {
+                        // a - числитель, b - знаменатель
                         double sa1 = (4-X)/X; // 1
                         double sa = Math.pow(X, sa1); // 2
                         double sb = (1.0 / 2.0) - Math.tan(X); // 3
@@ -36,8 +45,10 @@ public class Program {
                         // дробь в знаменателе подсчитана
                         double b1 = Math.pow(b1a / b1b,2); // 9
                         double b = 1 - b1; // 10
+                        // основной знаменатель подсчитан
 
                         result = Math.pow(a / b,2); // 11
+                        // результат для c[i] == 12 подсчитан (спойлер, там скорее всего везде NaN, см. вероятность)
                         break;
                     }
                     case 8:
@@ -45,18 +56,25 @@ public class Program {
                     case 20:
                     case 22:
                         result = Math.sin(Math.cbrt(Math.sin(X)));
+                        // результат для c[i] = {8, 18, 20, 22}
                         break;
                     default:
                     {
+                        // аналогично case 12
                         double a = 3.0;
+                        // числитель здесь постоянный
                         double bs1 = Math.atan((((X + 1) / 1) * Math.E) + 1); // IDE: '(X + 1) / 1' can be replaced with '(X + 1)'
                         double bs = Math.cbrt(bs1);
+                        // степень экспоненты в знаменателе подсчитана
                         double b = Math.pow(Math.E, bs);
+                        // основной знаменатель подсчитан
 
+                        // считаем степень, в которую надо возвести дробь (s - искомое)
                         double s1 = Math.sin(Math.pow(X + 1.0 / 3.0, 3)) - 1;
                         double s = (s1 / 2) / 3;
 
                         result = Math.pow(a / b, s);
+                        // результат для иных значений c[i]
                         break;
                     }
                 }
