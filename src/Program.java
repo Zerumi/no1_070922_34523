@@ -85,7 +85,6 @@ public class Program {
         // step 4
         for (double[] doubles : arr) {
             for (double aDouble : doubles) {
-                //System.out.println("Element " + arr[i][j] + " at: " + i + " " + j);
                 System.out.printf("%.4g  ", aDouble);
             }
             System.out.println();
